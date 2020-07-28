@@ -39,7 +39,11 @@ export const Navbar = ( { productCount } ) => {
 			</ul>
 
 			<ul className="nav-items">
-				<li><a href=""><span className="ti-shopping-cart main-color"></span>({productCount})</a></li>
+				<Link to="/cart">
+				<li>
+					<span className="ti-shopping-cart main-color"></span>({productCount})
+				</li>
+				</Link>
 				<li><a href=""><span className="ti-user main-color"></span></a></li>
 			</ul>
 		</header>
