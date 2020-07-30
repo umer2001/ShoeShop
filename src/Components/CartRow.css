@@ -1,0 +1,18 @@
+img {
+    width: 100%;
+    transform: rotate(-20deg);
+}
+
+.root-detail {
+    display: inline;
+}
+
+.quantity {
+    background-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+}
+
+option {
+    background-color: #151515;
+}

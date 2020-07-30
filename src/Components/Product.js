@@ -3,21 +3,24 @@ import {Cartcontext} from '../Cartcontext';
 import './Product.css';
 
 import shoeimg from './../img/black.png';
+import shoe1 from './../img/imageedit_1_6582031182.png';
 
 export const Product = ({match, onClick, count}) => {
+    var name = match.params.id;
+    var price = shoes[name].price;
     const [active, setActive] = useState("blue");
     const [size, setSize] = useState("9");
     const [cart, setCart] = useContext(Cartcontext);
 
-    async function addToCart(name,active,size) {
+    async function addToCart(name,active,size,price) {
         const details = {
             name,
             active,
-            size
+            size,
+            price
         };        
         setCart([details,...cart],);
         onClick(count+1);
-        console.log(cart);
     }
     return (
         <div className="d-container">
@@ -40,7 +43,7 @@ export const Product = ({match, onClick, count}) => {
                 <div className="info">
                     <div className="shoeName">
                         <div>
-                            <h1 className="big">{match.params.id}</h1>
+                            <h1 className="big">{name}</h1>
                             <span className="new">new</span>
                         </div>
                         <h3 className="small">Men's running shoes</h3>
@@ -70,10 +73,10 @@ export const Product = ({match, onClick, count}) => {
                         </div>
                     </div>
                     <div className="buy-price">
-                        <a className="buy" onClick={ () => addToCart(match.params.id,active,size)}><i className="ti-shopping-cart"></i>Add to card</a>
+                        <a className="buy" onClick={ () => addToCart(name,active,size,price)}><i className="ti-shopping-cart"></i>Add to card</a>
                         <div className="price">
                             <i className="fas fa-dollar-sign"></i>
-                            <h1>189.99</h1>
+                            <h1>{price}</h1>
                         </div>
                     </div>
                 </div>
@@ -83,3 +86,36 @@ export const Product = ({match, onClick, count}) => {
 }
 
 export default Product;
+
+const shoes = {
+    "Nike 720T" : {
+      name: "Nike 720T",
+      price: 25,
+      image: shoe1
+    },
+    "Nike M40" : {
+      name:"Nike M40",
+      price: 26,
+      image: shoe1
+    },
+    "Nike LK11" : {
+      name: "Nike LK11",
+      price: 27,
+      image: shoe1
+    },
+    "Nike Knight02" : {
+      name: "Nike Knight02",
+      price: 28,
+      image: shoe1
+    },
+    "Nike R72" : {
+      name: "Nike R72",
+      price: 29,
+      image: shoe1
+    },
+    "Nike TK65" : {
+      name: "Nike TK65",
+      price: 30,
+      image: shoe1
+    }
+  }
