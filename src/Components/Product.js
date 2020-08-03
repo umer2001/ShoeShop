@@ -12,7 +12,7 @@ export const Product = ({match, onClick, count}) => {
     const [size, setSize] = useState("9");
     const [cart, setCart] = useContext(Cartcontext);
 
-    async function addToCart(name,active,size,price) {
+    function addToCart(name,active,size,price) {
         const details = {
             name,
             active,
@@ -76,7 +76,7 @@ export const Product = ({match, onClick, count}) => {
                         <a className="buy" onClick={ () => addToCart(name,active,size,price)}><i className="ti-shopping-cart"></i>Add to card</a>
                         <div className="price">
                             <i className="fas fa-dollar-sign"></i>
-                            <h1>{price}</h1>
+                            <h1>${price}</h1>
                         </div>
                     </div>
                 </div>

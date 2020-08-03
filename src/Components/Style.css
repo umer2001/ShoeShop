@@ -119,23 +119,35 @@ header a {
 	border-radius: 50%;
 }
 
-.var-circle.selected {
+.var-circle.red.selected {
+	border: 1px solid tomato;
+}
+
+.var-circle.blue.selected {
+	border: 1px solid #00ccff;
+}
+
+.var-circle.pink.selected {
+	border: 1px solid pink;
+}
+
+.var-circle.yellow.selected {
 	border: 1px solid #cad51c;
 }
 
-.var-circle.selected .circle {
+.var-circle.yellow .circle {
 	background: #cad51c;
 }
 
-.circle.red {
+.var-circle.red .circle {
 	background: tomato;
 }
 
-.circle.blue {
+.var-circle.blue .circle {
 	background: #00ccff;
 }
 
-.circle.pink {
+.var-circle.pink .circle {
 	background: pink;
 }
 

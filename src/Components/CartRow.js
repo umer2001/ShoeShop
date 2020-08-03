@@ -7,7 +7,7 @@ export const CartRow = ({ name, color, size, price }) => {
     return (
         <div className="row">
                     <div className="col-md-6">
-                        <img src={shoeimg} alt="" srcset="" />
+                        <img src={shoeimg} className="cart-shoe" alt="" srcset="" />
                     </div>
                     <div className="col-md-6">
                         <h1>{name}</h1>

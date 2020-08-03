@@ -1,5 +1,5 @@
-img {
-    width: 100%;
+img.cart-shoe {
+    width: 99%;
     transform: rotate(-20deg);
 }
 
@@ -15,4 +15,8 @@ img {
 
 option {
     background-color: #151515;
+}
+
+.button.checkout {
+    margin-left: 18%;
 }
