@@ -173,7 +173,7 @@ body {
     background: #e91e63;
 }
 
-.container .card .contentbox a {
+.container .card .contentbox p {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -187,7 +187,7 @@ body {
     transition: 0.5s;
 }
 
-.container .card:hover .contentbox a {
+.container .card:hover .contentbox p {
     opacity: 1;
     transform: translateY(0px);
     transition-delay: 0.75s;

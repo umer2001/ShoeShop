@@ -14,18 +14,18 @@ export const Navbar = ( { productCount } ) => {
 					<div className="collapse navbar-collapse" id="navbarTogglerDemo01">
 					  <ul className="navbar-nav mr-auto mt-2 mt-lg-0 p-2">
                           <Link to="/">
-                            <li className={`nav-item ${(path == '/') ? 'active' : ''}`}>
-						        <a className="nav-link">HOME <span className="sr-only">(current)</span></a>
+                            <li className={`nav-item nav-link ${(path === '/') ? 'active' : ''}`}>
+						        HOME
 						    </li>
                           </Link>
                           <Link to="/shop">
-                            <li className={`nav-item ${(path == '/shop') ? 'active' : ''}`}>
-						        <a className="nav-link">SHOP</a>
+                            <li className={`nav-item nav-link ${(path === '/shop') ? 'active' : ''}`}>
+						        SHOP
 						    </li>
                           </Link>
                           <Link>
-                            <li className="nav-item">
-						        <a className="nav-link disabled">Disabled</a>
+                            <li className="nav-item nav-link disabled">
+						        Disabled
 						    </li>
                           </Link>
 					  </ul>
@@ -34,8 +34,12 @@ export const Navbar = ( { productCount } ) => {
 			</div>
 
 			<ul className="p-2">
-				<li><a href="" className="main-color">MEN</a></li>
-				<li><a href="">WOMEN</a></li>
+				<li>
+					<Link to="/" className="main-color">MEN</Link>
+				</li>
+				<li>
+					<Link to="/" className="main-color">WOMEN</Link>
+				</li>
 			</ul>
 
 			<ul className="nav-items">
@@ -44,7 +48,9 @@ export const Navbar = ( { productCount } ) => {
 					<span className="ti-shopping-cart main-color"></span>({productCount})
 				</li>
 				</Link>
-				<li><a href=""><span className="ti-user main-color"></span></a></li>
+				<li>
+				<Link to="#" className="main-color"><span className="ti-user main-color"></span></Link>
+				</li>
 			</ul>
 		</header>
     )

@@ -116,6 +116,7 @@ header a {
 .circle {
 	height: 100%;
 	width: 100%;
+	text-align: center;
 	border-radius: 50%;
 }
 
@@ -135,6 +136,10 @@ header a {
 	border: 1px solid #cad51c;
 }
 
+.var-circle.gray.selected {
+	border: 1px solid #333;
+}
+
 .var-circle.yellow .circle {
 	background: #cad51c;
 }
@@ -149,6 +154,10 @@ header a {
 
 .var-circle.pink .circle {
 	background: pink;
+}
+
+.var-circle.gray .circle {
+	background: #333;
 }
 
 .button button {

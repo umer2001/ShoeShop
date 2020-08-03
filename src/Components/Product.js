@@ -31,7 +31,7 @@ export const Product = ({match, onClick, count}) => {
                     </div>
                     <h1 className="nike">nike</h1>
                     <img src="img/logo.png" alt="" className="logo" />
-                    <a href="#" className="share"><i className="fas fa-share-alt"></i></a>
+                    <a className="share"><i className="fas fa-share-alt"></i></a>
     
                     <img src={shoeimg} alt="" className="shoe show" color="blue" />
                     <img src="img/red.png" alt="" className="shoe" color="red" />

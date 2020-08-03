@@ -8,6 +8,7 @@ export const Cart = () => {
     var shipping = cart.length*0.5;
     cart.map((item) => {
         subTotal += item.price;
+        return subTotal;
     })
     return (
         <div className="row">
@@ -61,3 +62,5 @@ export const Cart = () => {
 }
 
 export default Cart;
+
+//TODO: on click confirm order cart count to 0.

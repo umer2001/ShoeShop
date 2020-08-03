@@ -52,6 +52,20 @@ export const Home = ({onClick, count}) => {
 						<div className="circle" onClick={() => setActive("pink")}></div>
 					</div>
 				</div>
+				<div className="variants">
+					<div className={`var-circle gray ${(size === "7") ? 'selected' : ''}`}>
+						<div className="circle" onClick={() => setSize("7")}><small>7</small></div>
+					</div>
+					<div className={`var-circle gray ${(size === "8") ? 'selected' : ''}`}>
+						<div className="circle" onClick={() => setSize("8")}><small>8</small></div>
+					</div>
+					<div className={`var-circle gray ${(size === "9") ? 'selected' : ''}`}>
+						<div className="circle" onClick={() => setSize("9")}><small>9</small></div>
+					</div>
+					<div className={`var-circle gray ${(size === "10") ? 'selected' : ''}`}>
+						<div className="circle" onClick={() => setSize("10")}><small>10</small></div>
+					</div>
+				</div>
 
 				<div className="button">
 					<button onClick={ () => addToCart(name,active,size,price)}><span className="ti-shopping-cart"></span> Add to Cart</button>
