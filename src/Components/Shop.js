@@ -7,7 +7,7 @@ export const Shop = () => {
     return (
         <div className="row">
             {Object.entries(shoes).map(([slug, { name, image }]) => {
-                return <Card name={name} img={image} />
+                return <Card name={name} img={image} key={name} />
             })}
         </div>
     )

@@ -10,7 +10,7 @@ export const Card = ( { name, image } ) => {
                 <Link to={'shop/'+name}>
                     <div className="card">
                         <div className="imgbox">
-                            <img src={shoe} alt={name} srcset="" />
+                            <img src={shoe} alt={name} srcSet="" />
                         </div>
                         <div className="contentbox">
                             <h2>{name}</h2>

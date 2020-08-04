@@ -23,11 +23,6 @@ export const Navbar = ( { productCount } ) => {
 						        SHOP
 						    </li>
                           </Link>
-                          <Link>
-                            <li className="nav-item nav-link disabled">
-						        Disabled
-						    </li>
-                          </Link>
 					  </ul>
 					</div>
 				</nav>

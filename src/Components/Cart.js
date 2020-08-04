@@ -14,7 +14,7 @@ export const Cart = () => {
         <div className="row">
             <div className="col-md-8">
                 {cart.map((item) => {
-                    return <CartRow name={item.name} color={item.active} size={item.size} price={item.price} />
+                    return <CartRow name={item.name} color={item.active} size={item.size} price={item.price} key={item.name} />
                 })}
             </div>
             <div className="col-md-4">
@@ -41,7 +41,7 @@ export const Cart = () => {
                     <button type="button" data-toggle="modal" data-target="#exampleModalCenter" onClick={() => {setCart([]);shipping=subTotal=0}}>Confirm Order</button>
                 </div>
             </div>
-            <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content bg-dark">
                         <div className="modal-header">

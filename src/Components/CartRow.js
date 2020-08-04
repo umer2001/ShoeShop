@@ -7,7 +7,7 @@ export const CartRow = ({ name, color, size, price }) => {
     return (
         <div className="row">
                     <div className="col-md-6">
-                        <img src={shoeimg} className="cart-shoe" alt="" srcset="" />
+                        <img src={shoeimg} className="cart-shoe" alt="" srcSet="" />
                     </div>
                     <div className="col-md-6">
                         <h1>{name}</h1>
@@ -24,12 +24,12 @@ export const CartRow = ({ name, color, size, price }) => {
                         <div className="row">
                             <div className="col-md-6">
                                 <h3 className="root-detail">Quantity : </h3>
-                                <select class="quantity root-detail">
-                                    <option selected>1</option>
-                                    <option>2</option>
-                                    <option >3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                                <select className="quantity root-detail">
+                                    <option defaultValue>1</option>
+                                    <option value>2</option>
+                                    <option value>3</option>
+                                    <option value>4</option>
+                                    <option value>5</option>
                                 </select>
                             </div>
                             <div className="col-md-6">
