@@ -6,15 +6,17 @@ export const Cart = () => {
     const [cart, setCart] = useContext(Cartcontext);
     var subTotal = 0;
     var shipping = cart.length*0.5;
+    console.log('cart');
+    console.log(cart);
     cart.map((item) => {
-        subTotal += item.price;
+        subTotal += item.price*item.quantity;
         return subTotal;
     })
     return (
         <div className="row">
             <div className="col-md-8">
-                {cart.map((item) => {
-                    return <CartRow name={item.name} color={item.active} size={item.size} price={item.price} key={item.name} />
+                {cart.map((item, index) => {
+                    return <CartRow index={index} key={index} />
                 })}
             </div>
             <div className="col-md-4">
@@ -31,9 +33,9 @@ export const Cart = () => {
                     <div className="col-4">
                         <h3>${subTotal}</h3>
                         <h3>${shipping}</h3>
-                        <h3>$2</h3>
+                        <h3>${(cart.length > 0) ? '2' : '0'}</h3>
                         <hr />
-                        <h3>${shipping+2+subTotal}</h3>
+                        <h3>${(cart.length > 0) ? shipping+2+subTotal : '0'}</h3>
                         <hr />
                     </div>
                 </div>

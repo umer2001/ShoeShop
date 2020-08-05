@@ -12,12 +12,13 @@ export const Product = ({match, onClick, count}) => {
     const [size, setSize] = useState("9");
     const [cart, setCart] = useContext(Cartcontext);
 
-    function addToCart(name,active,size,price) {
+    function addToCart(name,active,size,price,quantity=1) {
         const details = {
             name,
             active,
             size,
-            price
+            price,
+            quantity
         };        
         setCart([details,...cart],);
         onClick(count+1);

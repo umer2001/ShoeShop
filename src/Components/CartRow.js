@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Cartcontext} from '../Cartcontext';
 import './CartRow.css';
 
 import shoeimg from './../img/black.png';
 
-export const CartRow = ({ name, color, size, price }) => {
+export const CartRow = ({ index }) => {
+    const [cart, setCart] = useContext(Cartcontext);
+    var name = cart[index].name;
+    var color = cart[index].active;
+    var size = cart[index].size;
+    var quantity = cart[index].quantity;
+    var price = cart[index].price;
+    function updateQty(num, index) {
+        var cpyCart = [...cart];
+        var cpyCartItem = {...cpyCart[index]};
+        cpyCartItem.quantity = num;
+        cpyCart[index] = cpyCartItem;
+        setCart(cpyCart);
+    }
     return (
         <div className="row">
                     <div className="col-md-6">
@@ -24,12 +38,12 @@ export const CartRow = ({ name, color, size, price }) => {
                         <div className="row">
                             <div className="col-md-6">
                                 <h3 className="root-detail">Quantity : </h3>
-                                <select className="quantity root-detail">
-                                    <option defaultValue>1</option>
-                                    <option value>2</option>
-                                    <option value>3</option>
-                                    <option value>4</option>
-                                    <option value>5</option>
+                                <select defaultValue={quantity} onChange={(e) => updateQty(e.target.value, index)} className="quantity root-detail">
+                                    <option value={1}>1</option>
+                                    <option value={2}>2</option>
+                                    <option value={3}>3</option>
+                                    <option value={4}>4</option>
+                                    <option value={5}>5</option>
                                 </select>
                             </div>
                             <div className="col-md-6">
