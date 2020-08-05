@@ -1,11 +1,12 @@
 import React, {useState, useContext} from 'react';
 import {Cartcontext} from '../Cartcontext';
+import {Link} from 'react-router-dom';
 import './Product.css';
 
 import shoeimg from './../img/black.png';
 import shoe1 from './../img/imageedit_1_6582031182.png';
 
-export const Product = ({match, onClick, count}) => {
+export const Product = ({ match }) => {
     var name = match.params.id;
     var price = shoes[name].price;
     const [active, setActive] = useState("blue");
@@ -21,7 +22,6 @@ export const Product = ({match, onClick, count}) => {
             quantity
         };        
         setCart([details,...cart],);
-        onClick(count+1);
     }
     return (
         <div className="d-container">
@@ -32,7 +32,7 @@ export const Product = ({match, onClick, count}) => {
                     </div>
                     <h1 className="nike">nike</h1>
                     <img src="img/logo.png" alt="" className="logo" />
-                    <a className="share"><i className="fas fa-share-alt"></i></a>
+                    <Link to="#" className="share"><i className="fas fa-share-alt"></i></Link>
     
                     <img src={shoeimg} alt="" className="shoe show" color="blue" />
                     <img src="img/red.png" alt="" className="shoe" color="red" />
@@ -74,7 +74,7 @@ export const Product = ({match, onClick, count}) => {
                         </div>
                     </div>
                     <div className="buy-price">
-                        <a className="buy" onClick={ () => addToCart(name,active,size,price)}><i className="ti-shopping-cart"></i>Add to card</a>
+                        <button className="buy" onClick={ () => addToCart(name,active,size,price)}><i className="ti-shopping-cart"></i>Add to card</button>
                         <div className="price">
                             <i className="fas fa-dollar-sign"></i>
                             <h1>${price}</h1>

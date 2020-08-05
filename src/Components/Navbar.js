@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Cartcontext} from '../Cartcontext';
 import {Link, useLocation} from 'react-router-dom';
 import './Style.css';
 
-export const Navbar = ( { productCount } ) => {
+export const Navbar = ( ) => {
 	let path = useLocation().pathname;
+	const [cart] = useContext(Cartcontext);
     return (
         <header className="d-flex justify-content-between header">
 			<div className="pl-4 menu-toggle">
@@ -40,7 +42,7 @@ export const Navbar = ( { productCount } ) => {
 			<ul className="nav-items">
 				<Link to="/cart">
 				<li>
-					<span className="ti-shopping-cart main-color"></span>({productCount})
+					<span className="ti-shopping-cart main-color"></span>({cart.length})
 				</li>
 				</Link>
 				<li>

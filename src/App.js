@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
@@ -11,16 +11,15 @@ import Cart from './Components/Cart';
 import './App.css';
 
 function App() {
-  const [productCount, setProductCount] = useState(0);
   return (
     <CartProvider>
       <Router>
       <div className="App">
-        <Navbar  productCount={productCount} />
+        <Navbar />
         <Switch>
-          <Route path="/" exact component={ () => <Home count={productCount} onClick={ (count) => setProductCount(count) } />} />
+          <Route path="/" exact component={Home} />
           <Route path="/shop" exact component={Shop} />
-          <Route path="/shop/:id" render={(props) => <Product count={productCount} onClick={ (count) => setProductCount(count) } {...props}/>} />
+          <Route path="/shop/:id" render={(props) => <Product {...props}/>} />
           <Route path="/cart" exact component={Cart} />
         </Switch>
       </div>

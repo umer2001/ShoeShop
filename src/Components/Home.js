@@ -3,22 +3,22 @@ import {Cartcontext} from '../Cartcontext';
 import './Style.css';
 import shoe from '../img/hiclipart.com(1).png';
 
-export const Home = ({onClick, count}) => {
+export const Home = ( ) => {
 	const name = "Nike Runners Men";
 	const price = 25000;
     const [active, setActive] = useState("blue");
     const [size, setSize] = useState("9");
     const [cart, setCart] = useContext(Cartcontext);
 
-	function addToCart(name,active,size,price) {
+	function addToCart(name,active,size,price,quantity=1) {
         const details = {
             name,
             active,
             size,
-            price
+            price,
+            quantity
         };        
-        setCart([details,...cart],);
-        onClick(count+1);
+		setCart([details,...cart],);
 	}
 	
     return (

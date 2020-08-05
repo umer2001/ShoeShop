@@ -316,6 +316,7 @@
 .buy{
     padding: .7rem 1rem;
     background-color: var(--primary);
+    border: none;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;

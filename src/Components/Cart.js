@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {Cartcontext} from '../Cartcontext';
 import CartRow from './CartRow';
 
@@ -6,8 +6,6 @@ export const Cart = () => {
     const [cart, setCart] = useContext(Cartcontext);
     var subTotal = 0;
     var shipping = cart.length*0.5;
-    console.log('cart');
-    console.log(cart);
     cart.map((item) => {
         subTotal += item.price*item.quantity;
         return subTotal;
@@ -20,7 +18,7 @@ export const Cart = () => {
                 })}
             </div>
             <div className="col-md-4">
-                <h1>Summary</h1>
+                <h1 className="main-color">Summary</h1>
                 <div className="row">
                     <div className="col-8">
                         <h3>Subtotal</h3>
