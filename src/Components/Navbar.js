@@ -39,7 +39,7 @@ export const Navbar = ( ) => {
 				</li>
 			</ul>
 
-			<ul className="nav-items p-2">
+			<ul className="nav-items pt-2">
 				<Link to="/cart">
 				<li>
 					<span className="ti-shopping-cart main-color"></span>({cart.length})

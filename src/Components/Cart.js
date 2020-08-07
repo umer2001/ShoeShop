@@ -62,7 +62,7 @@ export const Cart = () => {
                 </div>
             </> : 
             <div className="position-absolute w-100 text-center" style={{top: "20%"}}>
-                <img src={EmptyCart} alt="empty cart"/>
+                <img src={EmptyCart} className="w-100" alt="empty cart"/>
                 <h1 className="main-color mt-2">Your Cart is empty</h1>
             </div>
             }
