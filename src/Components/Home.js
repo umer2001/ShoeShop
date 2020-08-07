@@ -26,7 +26,7 @@ export const Home = ( ) => {
 			<div className="col-md-3 title">
 				<h1>{name}</h1>
 
-				<div className="price">
+				<div className="main-price">
 					<h3>${price}</h3>
 				</div>
 			</div>
@@ -69,7 +69,6 @@ export const Home = ( ) => {
 
 				<div className="button">
 					<button onClick={ () => addToCart(name,active,size,price)}><span className="ti-shopping-cart"></span> Add to Cart</button>
-					<button className="favorite"><span className="ti-heart"></span> Favorite</button>
 				</div>
 			</div>
 		</div>

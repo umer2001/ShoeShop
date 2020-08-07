@@ -10,4 +10,3 @@ export const CartProvider = (props) => {
         </Cartcontext.Provider>
     )
 }
-//TODO: add cart count to this context 

@@ -16,6 +16,9 @@ body {
 	color: #fff;
 }
 
+a:hover {
+	text-decoration: none;
+}
 
 .hero {
 	height: 100vh;
@@ -28,7 +31,7 @@ body {
 header {
 	width: 100%;
 	margin: auto;
-	padding: 2rem 0rem;
+	padding: 1rem 0rem;
 	display: flex;
 	justify-content: space-between;
 }
@@ -58,6 +61,10 @@ header a {
 	color: #cad51c;
 }
 
+.main-color:hover {
+	color: #e9f533;
+}
+
 .image img {
 	width: 100%;
 	transform: scale();
@@ -82,11 +89,11 @@ header a {
 	font-size: 5rem;
 }
 
-.price {
+.main-price {
 	margin-top: 5rem;
 }
 
-.price h3 {
+.main-price h3 {
 	color: #cad51c;
 	font-size: 2.5rem;
 } 
@@ -160,6 +167,10 @@ header a {
 	background: #333;
 }
 
+.button {
+	margin-bottom: 15px;
+}
+
 .button button {
 	padding: 1rem 3rem;
 	background: #cad51c;
@@ -167,12 +178,14 @@ header a {
 	border: 1px solid #cad51c;
 	font-weight: bold;
 	font-size: .95rem;
+	transition-duration: 0.3s;
 }
 
-.button button.favorite {
+.button button:hover {
 	background: #fff;
-	color: #cad51c;
 	border: 1px solid #fff;
+	transform: scale(1.1);
+	transition-duration: 0.3s;
 }
 
 /*
@@ -277,6 +290,6 @@ nav {
     padding: .5rem 1rem;
 }
 
-.nav-item.active > a {
+a > .nav-item.active {
 	color: #cad51c!important;
 }
