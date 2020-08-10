@@ -1,14 +1,14 @@
 import React, {useState, useContext} from 'react';
 import {Cartcontext} from '../Cartcontext';
 import './Style.css';
-import shoe from '../img/hiclipart.com(1).png';
 
 export const Home = ( ) => {
 	const name = "Nike Runners Men";
 	const price = 25000;
     const [active, setActive] = useState("blue");
     const [size, setSize] = useState("9");
-    const [cart, setCart] = useContext(Cartcontext);
+	const [cart, setCart] = useContext(Cartcontext);
+	const shoec = "http://rashan-1.epizy.com/img/home-"+active+".png";
 
 	function addToCart(name,active,size,price,quantity=1) {
         const details = {
@@ -32,7 +32,7 @@ export const Home = ( ) => {
 			</div>
 
 			<div className=" col-md-5 image">
-				<img src={shoe} alt="" />
+				<img src={shoec} alt="" />
 			</div>
 
 			<div className="col-md-4 description">
@@ -48,8 +48,8 @@ export const Home = ( ) => {
 					<div className={`var-circle blue ${(active === "blue") ? 'selected' : ''}`}>
 						<div className="circle" onClick={() => setActive("blue")}></div>
 					</div>
-					<div className={`var-circle pink ${(active === "pink") ? 'selected' : ''}`}>
-						<div className="circle" onClick={() => setActive("pink")}></div>
+					<div className={`var-circle black ${(active === "black") ? 'selected' : ''}`}>
+						<div className="circle" onClick={() => setActive("black")}></div>
 					</div>
 				</div>
 				<div className="variants">
