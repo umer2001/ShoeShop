@@ -5,7 +5,7 @@ import './Style.css';
 export const Home = ( ) => {
 	const name = "Nike Runners Men";
 	const price = 25000;
-    const [active, setActive] = useState("blue");
+    const [active, setActive] = useState("black");
     const [size, setSize] = useState("9");
 	const [cart, setCart] = useContext(Cartcontext);
 	const shoec = "https://www.img-load.ml/img/home-"+active+".png";
