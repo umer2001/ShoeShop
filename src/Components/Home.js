@@ -8,7 +8,7 @@ export const Home = ( ) => {
     const [active, setActive] = useState("blue");
     const [size, setSize] = useState("9");
 	const [cart, setCart] = useContext(Cartcontext);
-	const shoec = "http://rashan-1.epizy.com/img/home-"+active+".png";
+	const shoec = "https://www.img-load.ml/img/home-"+active+".png";
 
 	function addToCart(name,active,size,price,quantity=1) {
         const details = {
