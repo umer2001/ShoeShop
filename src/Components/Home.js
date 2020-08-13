@@ -4,22 +4,23 @@ import './Style.css';
 
 export const Home = ( ) => {
 	const name = "Nike Runners Men";
-	const price = 25000;
+	const price = 250;
     const [active, setActive] = useState("black");
     const [size, setSize] = useState("9");
 	const [cart, setCart] = useContext(Cartcontext);
-	const shoec = "https://www.img-load.ml/img/home-"+active+".png";
+	const image = "https://img-load.ml/img/home-"+active+".png";
 
-	function addToCart(name,active,size,price,quantity=1) {
+	function addToCart(name,active,size,price,image,quantity=1) {
         const details = {
             name,
             active,
             size,
             price,
-            quantity
+            quantity,
+            image
         };        
-		setCart([details,...cart],);
-	}
+        setCart([details,...cart],);
+    }
 	
     return (
         <div className="row content">
@@ -32,7 +33,7 @@ export const Home = ( ) => {
 			</div>
 
 			<div className=" col-md-5 image">
-				<img src={shoec} alt="" />
+				<img src={image} alt="" />
 			</div>
 
 			<div className="col-md-4 description">
@@ -68,7 +69,7 @@ export const Home = ( ) => {
 				</div>
 
 				<div className="button">
-					<button onClick={ () => addToCart(name,active,size,price)}><span className="ti-shopping-cart"></span> Add to Cart</button>
+					<button onClick={ () => addToCart(name,active,size,price,image)}><span className="ti-shopping-cart"></span> Add to Cart</button>
 				</div>
 			</div>
 		</div>

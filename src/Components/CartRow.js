@@ -2,8 +2,6 @@ import React, {useContext} from 'react';
 import {Cartcontext} from '../Cartcontext';
 import './CartRow.css';
 
-import shoeimg from './../img/black.png';
-
 export const CartRow = ({ index }) => {
     const [cart, setCart] = useContext(Cartcontext);
     var name = cart[index].name;
@@ -11,6 +9,8 @@ export const CartRow = ({ index }) => {
     var size = cart[index].size;
     var quantity = cart[index].quantity;
     var price = cart[index].price;
+    var image = cart[index].image;
+    
     function updateQty(num, index) {
         var cpyCart = [...cart];
         var cpyCartItem = {...cpyCart[index]};
@@ -21,7 +21,7 @@ export const CartRow = ({ index }) => {
     return (
         <div className="row">
                     <div className="col-md-6">
-                        <img src={shoeimg} className="cart-shoe" alt="" srcSet="" />
+                        <img src={image} className="cart-shoe" alt="" srcSet="" />
                     </div>
                     <div className="col-md-6">
                         <h1>{name}</h1>

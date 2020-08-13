@@ -3,23 +3,22 @@ import {Cartcontext} from '../Cartcontext';
 import {Link} from 'react-router-dom';
 import './Product.css';
 
-import shoeimg from './../img/black.png';
-import shoe1 from './../img/imageedit_1_6582031182.png';
-
 export const Product = ({ match }) => {
     var name = match.params.id;
     var price = shoes[name].price;
     const [active, setActive] = useState("blue");
     const [size, setSize] = useState("9");
     const [cart, setCart] = useContext(Cartcontext);
+    var image = `${shoes[name].image}${active}.png`;
 
-    function addToCart(name,active,size,price,quantity=1) {
+    function addToCart(name,active,size,price,image,quantity=1) {
         const details = {
             name,
             active,
             size,
             price,
-            quantity
+            quantity,
+            image
         };        
         setCart([details,...cart],);
     }
@@ -34,7 +33,7 @@ export const Product = ({ match }) => {
                     <img src="img/logo.png" alt="" className="logo" />
                     <Link to="#" className="share"><i className="fas fa-share-alt"></i></Link>
     
-                    <img src={shoeimg} alt="" className="shoe show" color="blue" />
+                    <img src={image} alt="" className="shoe show" color="blue" />
                     <img src="img/red.png" alt="" className="shoe" color="red" />
                     <img src="img/black.png" alt="" className="shoe" color="green" />
                     <img src="img/black.png" alt="" className="shoe" color="orange" />
@@ -74,7 +73,7 @@ export const Product = ({ match }) => {
                         </div>
                     </div>
                     <div className="buy-price">
-                        <button className="buy" onClick={ () => addToCart(name,active,size,price)}><i className="ti-shopping-cart"></i>Add to card</button>
+                        <button className="buy" onClick={ () => addToCart(name,active,size,price,image)}><i className="ti-shopping-cart"></i>Add to card</button>
                         <div className="price">
                             <i className="fas fa-dollar-sign"></i>
                             <h1>${price}</h1>
@@ -92,31 +91,31 @@ const shoes = {
     "Nike 720T" : {
       name: "Nike 720T",
       price: 25,
-      image: shoe1
+      image: "https://img-load.ml/img/a1-"
     },
     "Nike M40" : {
       name:"Nike M40",
       price: 26,
-      image: shoe1
+      image: "https://img-load.ml/img/a2-"
     },
     "Nike LK11" : {
       name: "Nike LK11",
       price: 27,
-      image: shoe1
+      image: "https://img-load.ml/img/a3-"
     },
     "Nike Knight02" : {
       name: "Nike Knight02",
       price: 28,
-      image: shoe1
+      image: "https://img-load.ml/img/a4-"
     },
     "Nike R72" : {
       name: "Nike R72",
       price: 29,
-      image: shoe1
+      image: "https://img-load.ml/img/a1-"
     },
     "Nike TK65" : {
       name: "Nike TK65",
       price: 30,
-      image: shoe1
+      image: "https://img-load.ml/img/a2-"
     }
   }

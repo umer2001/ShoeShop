@@ -1,16 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Card.css';
-import shoe from '../img/imageedit_1_6582031182.png';
 
-export const Card = ( { name, image } ) => {
+export const Card = ( { name, img } ) => {
     return (
         
             <div className="col-lg-4 col-md-6 col-sm-5 container">
                 <Link to={'shop/'+name}>
                     <div className="card">
                         <div className="imgbox">
-                            <img src={shoe} alt={name} srcSet="" />
+                            <img src={`${img}green.png`} alt={name} srcSet="" />
                         </div>
                         <div className="contentbox">
                             <h2>{name}</h2>
