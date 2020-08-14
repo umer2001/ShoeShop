@@ -31,13 +31,9 @@ export const Product = ({ match }) => {
                     </div>
                     <h1 className="nike">nike</h1>
                     <img src="img/logo.png" alt="" className="logo" />
-                    <Link to="#" className="share"><i className="fas fa-share-alt"></i></Link>
+                    <Link to="#" className="share"><i className="ti-sharethis"></i></Link>
     
-                    <img src={image} alt="" className="shoe show" color="blue" />
-                    <img src="img/red.png" alt="" className="shoe" color="red" />
-                    <img src="img/black.png" alt="" className="shoe" color="green" />
-                    <img src="img/black.png" alt="" className="shoe" color="orange" />
-                    <img src="img/black.png" alt="" className="shoe" color="black" />
+                    <img src={image} alt="" className="shoe show" />
     
                 </div>
                 <div className="info">

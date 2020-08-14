@@ -14,13 +14,13 @@ export const Cart = () => {
     })
     return (
         <div className="row">
-            <div className="col-md-8">
-                {cart.map((item, index) => {
-                    return <CartRow index={index} key={index} />
-                })}
-            </div>
             {(cart.length) ? 
             <>
+                <div className="col-md-8">
+                    {cart.map((item, index) => {
+                        return <CartRow index={index} key={index} />
+                    })}
+                </div>
                 <div className="col-md-4">
                     <h1 className="main-color">Summary</h1>
                     <div className="row">
@@ -61,8 +61,8 @@ export const Cart = () => {
                     </div>
                 </div>
             </> : 
-            <div className="position-absolute w-100 text-center" style={{top: "20%"}}>
-                <img src={EmptyCart} className="w-100" alt="empty cart"/>
+            <div className="position-absolute w-100 text-center" style={{top: "30%"}}>
+                <img src={EmptyCart} className="" alt="empty cart" style={{width: "360px"}} />
                 <h1 className="main-color mt-2">Your Cart is empty</h1>
             </div>
             }
